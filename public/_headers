@@ -1,0 +1,2 @@
+/*
+  Content-Security-Policy: frame-ancestors pr1730882761615--c.vf.force.com pr1730882761615.my.site.com *.pr1730882761615.my.site.com;
