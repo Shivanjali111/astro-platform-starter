@@ -1,3 +1,2 @@
 /*
-  X-Frame-Options: ALLOW-FROM pr1730882761615.my.site.com
-  Content-Security-Policy: frame-ancestors 'self' *;
+  Content-Security-Policy: frame-ancestors 'self' pr1730882761615--c.vf.force.com pr1730882761615.my.site.com *.pr1730882761615.my.site.com https://pr1730882761615.my.site.com https://agentforcev1.netlify.app;
