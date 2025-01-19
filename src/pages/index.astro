@@ -12,10 +12,40 @@ Any page or data can be rebuilt only when needed, without site visitors ever get
 ---
 
 <Layout title="Welcome to Astro.">
+    <!-- If your Layout supports a head slot -->
+    <slot name="head">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </slot>
+
     <ContextAlert class="mb-4" />
     <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
     <Markdown content={explainer} class="text-lg mb-10" />
     <p class="mb-8">
         <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-primary sm:btn-wide">Read the Docs</a>
     </p>
+
+    <script type="text/javascript">
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = "en_US"; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    "00DHu00000CIurx",
+                    "Healthcare_Solution",
+                    "https://pr1730882761615.my.site.com/ESWHealthcareSolution1731565377774",
+                    {
+                        scrt2URL:
+                            "https://pr1730882761615.my.salesforce-scrt.com",
+                    }
+                );
+            } catch (err) {
+                console.error("Error loading Embedded Messaging: ", err);
+            }
+        }
+    </script>
+    <script
+        type="text/javascript"
+        src="https://pr1730882761615.my.site.com/ESWHealthcareSolution1731565377774/assets/js/bootstrap.min.js"
+        onload="initEmbeddedMessaging()"
+    ></script>
 </Layout>
