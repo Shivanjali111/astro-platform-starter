@@ -47,4 +47,16 @@
     .btn:disabled {
         @apply text-neutral-400 bg-neutral-700;
     }
+
+    .embeddedMessagingFrame.isMaximized{
+        bottom: 0;
+        right: 0;
+        margin: 16px;
+        height: 100vh;
+        width: 100vw;
+        max-height: calc(100vh - 2em) !important;
+        max-width: calc(100vw - 2em) !important;
+        display: inline-block;
+        visibility: visible;
+   }
 }
