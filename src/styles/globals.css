@@ -48,7 +48,7 @@
         @apply text-neutral-400 bg-neutral-700;
     }
 
-    .embeddedMessagingFrame.isMaximized{
+    .embeddedMessagingFrame .isMaximized{
         bottom: 0;
         right: 0;
         margin: 16px;
