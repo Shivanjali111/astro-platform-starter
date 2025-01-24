@@ -9,6 +9,7 @@ import Layout from '../layouts/Layout.astro';
     </slot>
 
     <script type="text/javascript">
+
         function initEmbeddedMessaging() {
             try {
                 embeddedservice_bootstrap.settings.language = "en_US"; // For example, enter 'en' or 'en-US'
@@ -26,6 +27,23 @@ import Layout from '../layouts/Layout.astro';
                 console.error("Error loading Embedded Messaging: ", err);
             }
         }
+        // Add this script to the iframe page
+        window.addEventListener('message', (event) => {
+            const { type } = event.data;
+            if (type === 'overrideCreateElement') {
+                (function() {
+                    const originalCreateElement = document.createElement;
+        
+                    document.createElement = function(tagName, options) {
+                        console.log('Custom createElement called:', tagName);
+                        return originalCreateElement.call(document, tagName, options);
+                    };
+        
+                    console.log('document.createElement overridden in iframe');
+                })();
+            }
+        });
+
     </script>
     <script
         type="text/javascript"
