@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: frame-ancestors 'self' pr1730882761615--c.vf.force.com pr1730882761615.my.site.com *.pr1730882761615.my.site.com https://agentforcev1.netlify.app;
+  Content-Security-Policy: frame-ancestors *;
   Access-Control-Allow-Origin: *;
   Access-Control-Allow-Methods: GET, POST, OPTIONS;
   Access-Control-Allow-Headers: Content-Type, Authorization;
